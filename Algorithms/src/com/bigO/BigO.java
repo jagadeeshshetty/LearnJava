@@ -2,11 +2,16 @@ package com.bigO;
 
 public class BigO {
     public static void main(String[] args) {
-        log(new int[]{1,2,3,4});
+        constant(new int[]{1,2,3,4});
     }
 
-    public static void log(int[] number) {
-        // O(1)
-        System.out.println(number[0]);
+    public static void constant(int[] numbers) {
+        // O(1) - CONSTANT
+        System.out.println(numbers[0]);
+
+        // O(n) - LINEAR
+        for (int number: numbers) {
+            System.out.println(number);
+        }
     }
 }
