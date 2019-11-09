@@ -20,5 +20,14 @@ public class BigO {
                 System.out.println(first + ", " + second);
             }
         }
+
+        // O(n^3) - CUBIC
+        for(int first: numbers) { // O(n)
+            for (int second: numbers) { // O(n)
+                for (int third: numbers) {
+                    System.out.println(first + ", " + second + ", " + third);
+                }
+            }
+        }
     }
 }
