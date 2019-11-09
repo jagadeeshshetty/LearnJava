@@ -13,5 +13,12 @@ public class BigO {
         for (int number: numbers) {
             System.out.println(number);
         }
+
+        // O(n^2) - QUADRATIC
+        for(int first: numbers) { // O(n)
+            for (int second: numbers) { // O(n)
+                System.out.println(first + ", " + second);
+            }
+        }
     }
 }
