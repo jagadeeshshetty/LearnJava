@@ -29,5 +29,16 @@ public class BigO {
                 }
             }
         }
+
+        // O(log n) - LOGARITHMIC
+        // Algorithms with logarithmic time more scalable than the one with the linear time.
+        // Logarithmic curve slows down as the input size grows.
+        // Example will see in tress and graphs.
+
+        // O(2^n) - EXPONENTIAL
+        // Exponential curve grows faster and faster.
+        // Algorithms run in exponential time is not scalable. It'll become very slow very soon.
+        // Exponential growth is the opposite of Logarithmic growth.
+
     }
 }

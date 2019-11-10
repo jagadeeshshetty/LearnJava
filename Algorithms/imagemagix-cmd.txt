@@ -1,0 +1,9 @@
+
+http://www.imagemagick.org/Usage/thumbnails/#rounded
+
+Soft and Blurred Edges
+convert bigO-curve.png -alpha set -background none  -vignette 0x4  bigO-curve_softBlur.png
+
+Rounded Corners
+convert -size 959x566 xc:none -draw "roundrectangle 0,0,959,566,6,6" mask.png
+convert bigO-curve.png -matte mask.png -compose DstIn -composite bigO-curve_rounded_corner.png
