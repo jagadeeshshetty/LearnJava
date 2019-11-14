@@ -1,6 +1,6 @@
 package com.codewithmosh;
 
-public class PrimitiveDataTypes {
+public class PrimitiveTypes {
     public static void main(String[] args) {
         byte age = 30;
         int millionViewsCount = 123_456_789;
