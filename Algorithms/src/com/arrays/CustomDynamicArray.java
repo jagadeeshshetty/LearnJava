@@ -7,6 +7,7 @@ package com.arrays;
 public class CustomDynamicArray {
     private int[] items;
     private int count;
+    private int number = 0;
 
     public CustomDynamicArray(int length) {
         items = new int[length];
@@ -20,7 +21,7 @@ public class CustomDynamicArray {
 
     public void insert(int item) {
         // If the array is full, resize it.
-        if ( items.length == count ) {
+        if (items.length == count) {
             // 1. Create a new array (twice the size)
             int[] newItems = new int[count * 2];
 
@@ -37,11 +38,12 @@ public class CustomDynamicArray {
 
     public void removeAt(int index) {
         // Validate the index
-        if ( index < 0 || index >= count )
+        if (index < 0 || index >= count)
             throw new IllegalArgumentException();
         // Shift the items to the left
-        for (int i = index; i < count; i++)
+        for (int i = index; i < count - 1; i++) {
             items[i] = items[i + 1];
+        }
         count--;
     }
 
@@ -56,5 +58,21 @@ public class CustomDynamicArray {
                 return i;
         }
         return -1;
+    }
+
+    public Integer max() {
+        for (int i = 0; i < count; i++) {
+            if (items[i] > number)
+                number = items[i];
+        }
+        return number;
+    }
+
+    public Integer min() {
+        for (int i = 0; i < count; i++) {
+            if (items[i] < number)
+                number = items[i];
+        }
+        return number;
     }
 }
