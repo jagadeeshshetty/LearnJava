@@ -5,7 +5,7 @@ public class Main {
         var employee = new Employee(50_000, 10);
         int wage = employee.calculateWage(20);
         System.out.println(wage);
-        wage = employee.calculateWage(); // overloaded method
+        wage = employee.calculateWage(); // method overloading
         System.out.println(wage);
     }
 }
