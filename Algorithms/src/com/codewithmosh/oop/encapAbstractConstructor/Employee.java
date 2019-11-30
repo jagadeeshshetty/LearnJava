@@ -15,6 +15,11 @@ public class Employee {
         return getBaseSalary() + (getHourlyRate() * extraHours);
     }
 
+    // overloaded method
+    public int calculateWage() {
+        return calculateWage(0);
+    }
+
     // Abstraction
     private int getBaseSalary() {
         return baseSalary;
