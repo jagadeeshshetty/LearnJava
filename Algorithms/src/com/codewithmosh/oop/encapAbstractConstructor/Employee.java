@@ -2,6 +2,7 @@ package com.codewithmosh.oop.encapAbstractConstructor;
 
 // Encapsulation, Abstraction and Constructor
 public class Employee {
+    private static int numberOfEmployees;
     private int baseSalary;
     private int hourlyRate;
 
@@ -14,6 +15,11 @@ public class Employee {
     public Employee(int baseSalary, int hourlyRate) {
         setBaseSalary(baseSalary);
         setHourlyRate(hourlyRate);
+        numberOfEmployees++;
+    }
+
+    public static void printNumberOfEmployees() {
+        System.out.println(Employee.numberOfEmployees);
     }
 
     public int calculateWage(int extraHours) {

@@ -8,5 +8,6 @@ public class Main {
         new Employee(50_000); // Constructor overloading
         wage = employee.calculateWage(); // method overloading
         System.out.println(wage);
+        Employee.printNumberOfEmployees(); // static method with static property
     }
 }
