@@ -6,6 +6,11 @@ public class Employee {
     private int hourlyRate;
 
     // Constructor
+    public Employee(int baseSalary) {
+        this(baseSalary, 0);
+    }
+
+    // Constructor overloading
     public Employee(int baseSalary, int hourlyRate) {
         setBaseSalary(baseSalary);
         setHourlyRate(hourlyRate);
@@ -39,7 +44,7 @@ public class Employee {
 
     // Abstraction
     private void setHourlyRate(int hourlyRate) {
-        if (hourlyRate <= 0)
+        if (hourlyRate < 0)
             throw new IllegalArgumentException("Hourly rate cannot be 0 or less.");
         this.hourlyRate = hourlyRate;
     }
