@@ -9,7 +9,8 @@ public class Employee {
         return getBaseSalary() + (getHourlyRate() * extraHours);
     }
 
-    public int getBaseSalary() {
+    // Abstraction
+    private int getBaseSalary() {
         return baseSalary;
     }
 
@@ -19,7 +20,8 @@ public class Employee {
         this.baseSalary = baseSalary;
     }
 
-    public int getHourlyRate() {
+    // Abstraction
+    private int getHourlyRate() {
         return hourlyRate;
     }
 
