@@ -9,10 +9,11 @@ public class BuiltinLinkedList {
         list.addLast(10);
         list.addLast(20);
         list.addLast(30);
+        list.addFirst(8);
         System.out.println("LinkedList: " + list);
         System.out.println("Size of LinkedList: " + list.size());
         System.out.println("LinkedList contains 10 ? " + list.contains(10));
-        Object[] array = list.toArray();
+        var array = list.toArray();
         System.out.println("LinkedList to Arrays: " + Arrays.toString(array));
     }
 }
