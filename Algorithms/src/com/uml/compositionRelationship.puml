@@ -1,0 +1,13 @@
+
+@startuml
+note "Composition Relationship\nShape class is composed of Size class.\n [In the Shape class, we have a field of type Size.]" as N1
+Shape *--> Size
+class Shape {
+    - size: Size
+}
+
+Car *--> Wheel : Car class is composed of Wheel class.
+class Car {
+    - wheel: Wheel
+}
+@enduml

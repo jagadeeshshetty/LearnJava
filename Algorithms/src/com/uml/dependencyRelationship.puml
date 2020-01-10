@@ -1,0 +1,8 @@
+
+@startuml
+note "Dependency Relationship" as N1
+Shape ..> Document : Some where in the Shape class,\n we have a reference to the Document class.\n Shape class has DEPENDENCY on Document class.
+class Shape {
+    - void render(Document doc)
+}
+@enduml

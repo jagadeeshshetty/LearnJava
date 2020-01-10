@@ -1,0 +1,9 @@
+
+@startuml
+note "Inheritance" as N1
+Shape <-- Rectangle : Rectangle class inherits from Shape class.
+class Shape
+note left: class Shape
+class Rectangle
+note left: class Rectangle
+@enduml
