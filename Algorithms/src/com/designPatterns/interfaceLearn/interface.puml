@@ -1,0 +1,22 @@
+
+@startuml
+note "Interface" as N1
+interface TaxCalculator {
+    + int fiscalYear()
+}
+
+class Tax2019 implements TaxCalculator {
+    + int fiscalYear()
+}
+
+class Tax2020 implements TaxCalculator {
+    + int fiscalYear()
+}
+
+class Main {
+    + void main()
+    + TaxCalculator getFiscalYear()
+}
+
+Main ..> TaxCalculator
+@enduml
