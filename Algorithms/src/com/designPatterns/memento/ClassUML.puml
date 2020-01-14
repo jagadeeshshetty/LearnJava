@@ -1,0 +1,23 @@
+@startuml
+class Editor {
+    - content: String
+    --
+    + createState()
+    + restoreState()
+}
+note left: <b>createState():</b>\n Stores current state of the Editor inside\n the EditorState object and returns it.\n\n It's like we call this method and say, hey\n save your current state and give it to me\n we will get EditorState object. Then we call\n the push() of the History class and say hey\n History, save this state. (this is how the classes\n collaborate)\n\n<b>restore(state)</b> takes <i>state object</i> and bring this editor\n back that state. So it'll reset it's fields based on what\n we have in the state object.
+
+class EditorState {
+    - content: String
+}
+
+class History {
+    - states: List
+    --
+    + push(state)
+    + pop()
+}
+
+Editor ..> EditorState : " Editor class stores a list of EditorState.\n So composition relationship between these two classes.\nSo will have list of EditorState inside Editor class.\nThis is better solution as it allows UNDO multiple times\n and we are not going to add too many fields to Editor class."
+EditorState <--* History: Single Responsibility Principle\n State management. It'll keep track of the changes in the state of Editor class.\nComposition Relationship: History class stores one or more EditorState object in a list.\nPush() add new state in the history.\nPop() Remove and return the last state.
+@enduml
