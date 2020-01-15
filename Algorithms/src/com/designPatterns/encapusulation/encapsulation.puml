@@ -1,0 +1,17 @@
+@startuml
+note "Encapsulation" as N1
+class Main {
+    - account: Account
+}
+
+class Account {
+    - balance: float
+    --
+    + deposit() void
+    + withdraw() void
+    + getBalance() float
+}
+note right:  "Protecting field <b>balance</b>\n with private access modifier."
+
+Main *--> Account : Create an account object and\naccess it's public members from Main class.
+@enduml
