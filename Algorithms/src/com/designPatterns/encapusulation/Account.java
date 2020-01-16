@@ -4,11 +4,13 @@ class Account {
     private float balance;
 
     void deposit(int amount) {
-        balance += amount;
+        if (amount > 0)
+            balance += amount;
     }
 
     void withdraw(int amount) {
-        balance -= amount;
+        if (amount > 0)
+            balance -= amount;
     }
 
     float getBalance() {

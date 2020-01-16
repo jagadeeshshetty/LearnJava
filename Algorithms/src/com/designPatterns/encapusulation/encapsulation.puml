@@ -1,5 +1,5 @@
 @startuml
-note "Encapsulation" as N1
+title "Encapsulation"
 class Main {
     - account: Account
 }
