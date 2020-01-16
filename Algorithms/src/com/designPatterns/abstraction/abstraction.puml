@@ -1,0 +1,13 @@
+@startuml
+title "Abstraction"\nReduce complexity by\nhidding unnecessary details
+Main <--* MailServer
+class MailServer {
+    + void sendMail()
+    - void connect()
+    - void disconnect()
+    - void authenticate()
+}
+class Main {
+    + void main()
+}
+@enduml
