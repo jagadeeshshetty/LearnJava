@@ -1,0 +1,24 @@
+@startuml
+title "Inheritance"\n<i>Reuse code across our classes.</i>
+
+class Main {
+    + void main()
+}
+
+class TextBox extends UIControl {
+}
+
+class CheckBox extends UIControl {
+}
+
+class UIControl {
+    + void enable()
+}
+
+Main *--> TextBox
+Main *--> CheckBox
+
+note top of Main: Main class composed of TextBox and CheckBox class objects.
+note bottom of TextBox: Inherits enable() method\n from UIControl class.
+note bottom of CheckBox: Inherits enable() method\n from UIControl class.
+@enduml
