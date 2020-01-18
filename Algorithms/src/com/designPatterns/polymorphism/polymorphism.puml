@@ -1,0 +1,27 @@
+@startuml
+title "Polymorphism"\n<i>Ability of an object to take on many forms.</i>
+class Main {
+    + void main()
+    + void drawUIControl(UIControl control)
+}
+
+class TextBox extends UIControl {
+    + void draw()
+}
+
+class CheckBox extends UIControl {
+    + void draw()
+}
+
+abstract class UIControl {
+    +{abstract} void draw()
+}
+
+Main *--> TextBox
+Main *--> CheckBox
+Main *--> UIControl
+
+note top of Main: Main class composed of UIControl, TextBox and CheckBox class objects.
+note bottom of TextBox: Implements draw() method\n from UIControl class.
+note bottom of CheckBox: Implements draw() method\n from UIControl class.
+@enduml
